@@ -1,6 +1,13 @@
 import express from "express";
+import helmet from "helmet"
+import path from "path"
 
 const server = express();
+
+server.use(helmet()) //protege o backend
+server.use(express.json()) //habilita leitura do json
+server.use(express.urlencoded({ extended: true})) //suporte a formulários
+server.use(express.static(path.join(__dirname, "../public")))
 
 server.get("/", (req, res) => {
   res.send("Olá mundo! 🌎");
