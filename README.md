@@ -13,50 +13,39 @@ Guia rápido para criar um servidor **Express** utilizando **TypeScript** e **TS
 
 ## 1️⃣ Inicializar o projeto
 
-📦 Crie o projeto e gere o `package.json` automaticamente:
+📦 Crie o projeto e gere o `package.json` automaticamente
+
+---
 
 ## 2️⃣ Instalar o TypeScript
 🧠 Instale o TypeScript como dependência de desenvolvimento:
 
 ---
-bash
-Copiar código
+
 npm i -D typescript
 ## 3️⃣ Criar configuração do TypeScript
 ⚙️ Gere o arquivo de configuração:
 
-bash
-Copiar código
 npx tsc --init
-📝 Edite o tsconfig.json com as seguintes configurações recomendadas:
 
-json
-Copiar código
-{
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true
-  }
-}
+---
+
 ## 4️⃣ Instalar TSX
 ⚡ Instale o TSX para rodar TypeScript diretamente sem compilar manualmente:
 
-bash
-Copiar código
+
 npm i -D tsx
 📁 Crie a pasta src e o arquivo principal server.ts:
 
-css
-Copiar código
 src/
  └── server.ts
+
+---
+
 ## 5️⃣ Adicionar script no package.json
+
+
+
 🛠️ Adicione este script para iniciar o servidor:
 
 json
@@ -65,27 +54,25 @@ Copiar código
   "start": "node --import=tsx --watch ./src/server.ts"
 }
 ▶️ Execute com:
-
-bash
-Copiar código
 npm start
+
+---
+
 ## 6️⃣ Instalar Express
 🌐 Instale o Express:
 
 bash
 Copiar código
 npm i express
-## 7️⃣ Instalar tipos do Express
-## 🧩 Instale os tipos para TypeScript:
 
-bash
-Copiar código
+---
+
+## 7️⃣ Instalar tipos do Express
+
 npm i -D @types/express
 🧱 Criando o servidor
 📝 No arquivo src/server.ts:
 
-ts
-Copiar código
 import express from "express";
 
 const server = express();
