@@ -1,1 +1,100 @@
-# aulas
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
+</p>
+
+# 🚀 Como instalar o **Express** com **TypeScript**
+
+Guia rápido para criar um servidor **Express** utilizando **TypeScript** e **TSX** ⚡
+
+---
+
+## 1️⃣ Inicializar o projeto
+
+📦 Crie o projeto e gere o `package.json` automaticamente:
+
+```bash
+npm init -y
+## 2️⃣ Instalar o TypeScript
+🧠 Instale o TypeScript como dependência de desenvolvimento:
+
+bash
+Copiar código
+npm i -D typescript
+## 3️⃣ Criar configuração do TypeScript
+⚙️ Gere o arquivo de configuração:
+
+bash
+Copiar código
+npx tsc --init
+📝 Edite o tsconfig.json com as seguintes configurações recomendadas:
+
+json
+Copiar código
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
+## 4️⃣ Instalar TSX
+⚡ Instale o TSX para rodar TypeScript diretamente sem compilar manualmente:
+
+bash
+Copiar código
+npm i -D tsx
+📁 Crie a pasta src e o arquivo principal server.ts:
+
+css
+Copiar código
+src/
+ └── server.ts
+## 5️⃣ Adicionar script no package.json
+🛠️ Adicione este script para iniciar o servidor:
+
+json
+Copiar código
+"scripts": {
+  "start": "node --import=tsx --watch ./src/server.ts"
+}
+▶️ Execute com:
+
+bash
+Copiar código
+npm start
+## 6️⃣ Instalar Express
+🌐 Instale o Express:
+
+bash
+Copiar código
+npm i express
+## 7️⃣ Instalar tipos do Express
+## 🧩 Instale os tipos para TypeScript:
+
+bash
+Copiar código
+npm i -D @types/express
+🧱 Criando o servidor
+📝 No arquivo src/server.ts:
+
+ts
+Copiar código
+import express from "express";
+
+const server = express();
+
+server.get("/", (req, res) => {
+  res.send("Olá mundo! 🌎");
+});
+
+server.listen(3000, () => {
+  console.log("🚀 Servidor rodando em http://localhost:3000");
+});
