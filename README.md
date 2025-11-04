@@ -15,11 +15,10 @@ Guia rápido para criar um servidor **Express** utilizando **TypeScript** e **TS
 
 📦 Crie o projeto e gere o `package.json` automaticamente:
 
-```bash
-npm init -y
 ## 2️⃣ Instalar o TypeScript
 🧠 Instale o TypeScript como dependência de desenvolvimento:
 
+---
 bash
 Copiar código
 npm i -D typescript
