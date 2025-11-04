@@ -84,3 +84,15 @@ server.get("/", (req, res) => {
 server.listen(3000, () => {
   console.log("🚀 Servidor rodando em http://localhost:3000");
 });
+
+---
+
+## 8️⃣ Instalar nossa proteção de hackers
+- Proteger nosso servidor de pessoas maliciosas tentando pegar dados do servidor
+npm i helmet
+
+---
+
+## 9️⃣ Reconhecer as tipagens do helmet
+
+npm i -D @types/helmet
