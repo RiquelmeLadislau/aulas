@@ -10,7 +10,9 @@ server.use(express.urlencoded({ extended: true})) //suporte a formulários
 server.use(express.static(path.join(__dirname, "../public")))
 
 server.get("/", (req, res) => {
-  res.send("Olá mundo! 🌎");
+  let nome = "john"
+  let idade = 90
+  res.json({ nome, idade })
 });
 
 server.listen(3000, () => {
