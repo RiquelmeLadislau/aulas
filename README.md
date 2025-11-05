@@ -29,6 +29,22 @@ Guia rápido para criar um servidor **Express** utilizando **TypeScript** e **TS
 
 >npx tsc --init
 
+⚙️ Config do tsconfig.json
+```
+  {
+  "compilerOptions": {
+  "target": "ES2020",
+  "module": "CommonJS",
+  "strict": true,
+  "esModuleInterop": true,
+  "forceConsistentCasingInFileNames": true,
+  "skipLibCheck": true,
+  "outDir": "./dist"
+  },
+  "include": ["src", "test"]
+  }
+
+```
 ---
 
 ## 4️⃣ Instalar TSX
@@ -50,8 +66,6 @@ src/
 
 🛠️ Adicione este script para iniciar o servidor:
 ```
-json
-Copiar código
 "scripts": {
   "start": "node --import=tsx --watch ./src/server.ts"
 }
