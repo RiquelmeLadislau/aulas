@@ -15,18 +15,19 @@ Guia rápido para criar um servidor **Express** utilizando **TypeScript** e **TS
 
 📦 Crie o projeto e gere o `package.json` automaticamente
 
+> npm init -y
+
 ---
 
 ## 2️⃣ Instalar o TypeScript
 🧠 Instale o TypeScript como dependência de desenvolvimento:
 
----
+> npm i -D typescript
 
-npm i -D typescript
 ## 3️⃣ Criar configuração do TypeScript
 ⚙️ Gere o arquivo de configuração:
 
-npx tsc --init
+>npx tsc --init
 
 ---
 
@@ -34,12 +35,13 @@ npx tsc --init
 ⚡ Instale o TSX para rodar TypeScript diretamente sem compilar manualmente:
 
 
-npm i -D tsx
+>npm i -D tsx
+```
 📁 Crie a pasta src e o arquivo principal server.ts:
 
 src/
  └── server.ts
-
+```
 ---
 
 ## 5️⃣ Adicionar script no package.json
@@ -47,32 +49,31 @@ src/
 
 
 🛠️ Adicione este script para iniciar o servidor:
-
+```
 json
 Copiar código
 "scripts": {
   "start": "node --import=tsx --watch ./src/server.ts"
 }
+```
 ▶️ Execute com:
-npm start
+>npm start
 
 ---
 
-## 6️⃣ Instalar Express
+## 6️⃣ Instalar Express 
 🌐 Instale o Express:
 
-bash
-Copiar código
-npm i express
+>npm i express
 
 ---
 
 ## 7️⃣ Instalar tipos do Express
 
-npm i -D @types/express
+>npm i -D @types/express
 🧱 Criando o servidor
 📝 No arquivo src/server.ts:
-
+```
 import express from "express";
 
 const server = express();
@@ -84,15 +85,15 @@ server.get("/", (req, res) => {
 server.listen(3000, () => {
   console.log("🚀 Servidor rodando em http://localhost:3000");
 });
-
+```
 ---
 
 ## 8️⃣ Instalar nossa proteção de hackers
 - Proteger nosso servidor de pessoas maliciosas tentando pegar dados do servidor n\
-  npm i helmet
+>npm i helmet
 
 ---
 
 ## 9️⃣ Reconhecer as tipagens do helmet
 
-npm i -D @types/helmet
+>npm i -D @types/helmet
