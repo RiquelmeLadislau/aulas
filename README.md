@@ -106,6 +106,9 @@ server.listen(3000, () => {
 - Proteger nosso servidor de pessoas maliciosas tentando pegar dados do servidor n\
 >npm i helmet
 
+npm i -D supertest
+
+npm i -D @types/supertest
 ---
 
 ## 9️⃣ Reconhecer as tipagens do helmet
